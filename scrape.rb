@@ -38,20 +38,14 @@ class SummaryFetcher
   end
 
   def last
-    @fd.flock(File::LOCK_EX)
     @fd.rewind
-    read = @fd.read
-    @fd.flock(File::LOCK_UN)
-
-    read.chomp
+    @fd.read.chomp
   end
 
   def last=(line)
-    @fd.flock(File::LOCK_EX)
     @fd.rewind
     @fd.write(line.chomp)
     @fd.flush
-    @fd.flock(File::LOCK_UN)
   end
 
   def current
