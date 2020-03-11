@@ -4,14 +4,12 @@ GEM
     mini_portile2 (2.4.0)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    terminal-notifier (2.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   nokogiri
-  terminal-notifier
 
 BUNDLED WITH
    2.1.4

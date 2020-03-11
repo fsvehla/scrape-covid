@@ -63,8 +63,8 @@ SummaryFetcher.start(Scraper.new) do |fetcher|
 
       message = Time.now.iso8601 + " -- new changes detected:\n--- #{ l.chomp }\n+++ " + n
 
+      print "\x07"
       puts message
-      system("terminal-notifier -ignoreDnD -title 'COVID-19 .at update' -message '#{ n }'")
     end
 
     Kernel.sleep 5 * 60 + (0.5 + rand)
